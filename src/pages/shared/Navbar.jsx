@@ -8,7 +8,7 @@ const Navbar = () => {
     const links =
         <>
             <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/myApplications'>My Applicatins</NavLink></li>
             <li><NavLink to='/'>Home</NavLink></li>
         </>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal gap-2 px-1">
                     {links}
                 </ul>
             </div>
