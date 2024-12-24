@@ -1,8 +1,13 @@
 const AddJob = () => {
+    const handleAddJob = e => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        console.log(formData.entries());
+    }
     return (
         <div>
             <h2 className="text-3xl">Add New Job Here</h2>
-            <form className="card-body">
+            <form onSubmit={handleAddJob} className="card-body">
                 {/* Job Title */}
                 <div className="form-control">
                     <label className="label">
@@ -64,8 +69,6 @@ const AddJob = () => {
                             <option>USD</option>
                             <option>INR</option>
                             <option>URO</option>
-                            <option>PKR</option>
-                            <option>CAD</option>
                         </select>
                     </div>
                 </div>
@@ -96,6 +99,27 @@ const AddJob = () => {
                         <span className="label-text">Job Responsibilities</span>
                     </label>
                     <textarea className="textarea textarea-bordered" name="responsibilities" placeholder="Put each Job Responsibilities in a new line"></textarea>
+                </div>
+                {/* HR Name */}
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">HR Name</span>
+                    </label>
+                    <input type="text" placeholder="HR Name" name="hr_name" className="input input-bordered" required />
+                </div>
+                {/* HR Email */}
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">HR Email</span>
+                    </label>
+                    <input type="email" placeholder="HR Email" name="hr_email" className="input input-bordered" required />
+                </div>
+                {/* Company Logo URL */}
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Company Logo URL</span>
+                    </label>
+                    <input type="text" placeholder="Company Logo URL" name="company_logo" className="input input-bordered" required />
                 </div>
                 {/* Submit */}
                 <div className="form-control mt-6">
